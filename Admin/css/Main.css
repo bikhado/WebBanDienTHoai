@@ -1,0 +1,121 @@
+﻿#wrapper {
+    width:100%;
+    background-color:#FFFFFF;
+    margin:auto;
+}
+#header{
+    position:relative;
+    width:100%;
+    min-height:500px;
+    background-color:#F7F7F7;
+} 
+#headertop{
+    width:100%; 
+    min-height:30px;
+    background-color:#F7F7F7;
+}
+#menutop{
+    position:relative;
+    left:10%;
+    top:10%;
+    width:80%; 
+    min-height:52px;
+    background-color:#16d43d;
+}
+#slider{
+    min-height:418px;
+    background-color:#F7F7F7;
+}
+#contain{
+    float:left;
+    position:relative;
+    left:10%;
+    top:10%;
+    margin-top:20px;
+    width:80%;
+    min-height:800px;
+    background-color:#ffd800;
+}
+#containleft{
+    margin-left:0px;
+    width:100%;
+    min-height:350px;
+    background-color:#b13a3a;
+}
+#containright{
+
+    min-height:800px;
+    background-color:#16d43d;
+}
+#footer{
+    clear:both;
+    width:80%;
+    position:relative;
+    left:10%;
+    top:10%;
+    min-height:200px;
+    background-color:#c64b4b;
+}
+.nav navbar-nav .li:hover{
+    background-color:#00ff21;
+}
+.navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: red;
+}
+	#menu{
+		background-color:#CC6;
+		}
+	#menu .theLoai{
+		background-color:#F63;
+		color:#FFFFFF;
+		display:block;
+		padding-top:5px;
+		padding-bottom:5px;
+		font-weight:bold;
+		}
+	#menu a{
+		/*color:#990000;*/
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:15px;
+		display:block;
+		border-bottom:solid 1px #C70;
+		text-decoration:none;
+		font-weight:bold;
+		}		
+	#menu a:hover{
+		color:#FF3300;
+		}	
+/*.col-sm-4{
+    float:left;
+    width:25%;
+    min-height:350px;
+    background-color:#b13a3a;
+}
+.col-sm-8{
+    float:left;
+    margin-left:4%;
+    width:71%;
+    min-height:800px;
+    background-color:#16d43d;
+}*/
+#headertop a{
+    display:block;
+    padding: 7px 16px;
+}
+#headertop a:hover{
+    background-color:#17bbe0;
+    color:red;
+}
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #f7f6f6;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}

@@ -1,0 +1,212 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Admin/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Admin/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="Admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Admin/css/Main.css" rel="stylesheet" />
+    <script type="text/javascript" src="Admin/js/bootstrap.js"></script>
+    <script type="text/javascript" src="Admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Admin/js/npm.js"></script>
+    <script type="text/javascript" src="Admin/js/jquery-3.2.0.min.js"></script>
+     <%-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--%>
+  <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+	#menu{
+		background: #eee;
+        color:#040404;
+        border:1px solid #ffffff;
+		}
+	#menu .theLoai{
+		background: url(Admin/images/tabRepeatInactive.png) repeat-x 0 0;
+		color:#040404;
+		display:block;
+		padding-top:5px;
+		padding-bottom:5px;
+		font-weight:bold;
+		}
+	#menu a{
+		/*color:#990000;*/
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:15px;
+		display:block;
+		border-bottom:solid 1px #ffffff;
+		text-decoration:none;
+		font-weight:normal;
+        color:#040404;
+		}	
+    #menu a:last-child{
+        border-bottom:none;
+    }	
+	#menu a:hover{
+		background-color:#2f8afa;
+		}	
+		
+</style>
+</head>
+<body>
+        <script type="text/javascript">
+            //Lam viec tren cac doi tuong: ten_the, class, id
+            $(document).ready(function (e) {
+
+                $('.loaiTin').hide();
+                /*	$('.loaiTin:first').show();*/
+                $('.loaiTin:eq(0)').show();
+                $('.theLoai').click(function () {
+                    /*$('.loaiTin').slideToggle(1000);*/
+                    $('.loaiTin').hide();
+                    $(this).next().show(1000);
+                });
+                $(".nav a").on("click", function () {
+                    $(".nav").find(".active").removeClass("active");
+                    $(this).parent().addClass("active");
+                });
+            });
+
+
+</script>
+    <form id="form1" runat="server">
+                <div id="wrapper">
+            <div id="header">
+                <div id="headertop">
+                    <a href="#" style="text-decoration:none;float:right"><span class="glyphicon glyphicon-chevron-left"></span> Quay về trang website</a>
+                </div>
+                <div id="menutop" >
+                    <nav class="navbar navbar-inverse" > 
+                     <div class="container-fluid">
+                    <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="admin/images/logo.png" height="30" /></a>
+                </div>
+                <ul class="nav navbar-nav" style="padding-left:20%;">
+                <li class="active"><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#">Đơn Hàng</a></li>
+                <li><a href="#">Đăng Ký</a></li>
+                </ul>
+            </div>
+</nav>
+                </div>
+                <div id="slider" style="margin-top:-20px">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:0px">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="themes/images/carousel/1.png" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Try Nguyễn Mobile</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+                </div>
+            </div>
+            <%--<div id="contain">
+                <div id="containleft">
+                    <div class="row">
+                    </div>
+                </div>
+                <div id="containright"></div>
+            </div>--%>
+                <div class="container-fluid" style="width:80%">
+
+  <div class="row" style="height:auto;background-color:#fbf7f7">
+    <div class="col-sm-3" style="padding-left:0px">
+        <div class="well well-small">
+            Admin: 
+            <a class="btn btn-danger">Logout</a>
+        </div>
+        <div class="nav nav-tabs nav-stacked">
+      <div id="menu" >
+<div>
+	<div class="theLoai">Quản lý</div>
+    <div class="loaiTin">
+    	<a href="#">Sản phẩm</a>
+        <a href="#">Đơn hàng</a>
+        <a href="#">Nhà sản xuất</a>
+        <a href="#">Danh mục</a>
+    </div>
+</div>
+<div>
+	<div class="theLoai">Thống kê</div>
+    <div class="loaiTin">
+    	<a href="#">Đơn hàng</a>
+    </div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>            </div>
+    </div>
+      <div>
+    <div class="col-sm-9" style="padding-left:0px;padding-right:0px">
+        <div class="well well-small">
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+            </div>
+  </div>
+       
+</div>
+         </div>
+            <div class="container-fluid" style="width:80%;background-color:#040404">
+                <div class="row">
+               
+                     <div class="col-sm-3">
+                         <h5 style="color:#ffffff">THÔNG TIN</h5>
+				 <p>
+                    <span style="display: block;"><a href="#" style="font-size:9pt">SẢN PHẨM MỚI</a> </span>
+                    <span style="display: block;"><a href="#" style="font-size:9pt">BÁN CHẠY</a>  </span>
+                </p>
+                     </div>
+                    <div class="col-sm-3">
+                        <h5 style="color:#ffffff">OUR OFFERS</h5>
+			 <p>
+                    <span style="display: block;"><a href="#" style="font-size:9pt">SẢN PHẨM MỚI</a> </span>
+                    <span style="display: block;"><a href="#" style="font-size:9pt">BÁN CHẠY</a>  </span>
+                </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 style="color:#ffffff">SOCIAL MEDIA </h5>
+				<a href="http://wwww.facebook.com/bikhado"><img width="60" height="60" src="themes/images/facebook.png" title="facebook" alt="facebook"/></a>
+				<a href="#"><img width="60" height="60" src="themes/images/twitter.png" title="twitter" alt="twitter"/></a>
+				<a href="#"><img width="60" height="60" src="themes/images/youtube.png" title="youtube" alt="youtube"/></a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+       
+ 
+    </form>
+</body>
+</html>
